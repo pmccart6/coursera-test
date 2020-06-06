@@ -1,0 +1,17 @@
+body{
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #9fc3fc;
+}
+
+#singleSection{
+    height: 1000px;
+    background-color: #8a2be2;
+}
+
+.navbar{
+    background-color: #8a2be2;
+}
+
+.navbar-header{
+    width:100%;
+}
