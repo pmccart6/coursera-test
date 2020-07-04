@@ -17,7 +17,7 @@
         };
 
         tbc.emptyList = function () {
-            if (tbc.items.length === 0) return "Nothing bought yet"
+            if (tbc.items.length === 0) return "Everything is bought!"
         }
     };
 
