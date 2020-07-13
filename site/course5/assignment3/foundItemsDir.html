@@ -1,0 +1,9 @@
+<div>
+    <table>
+        <tr ng-repeat='item in ctrl.items'>
+            <td>{{ item.description }}</td>
+            <td><button ng-click='ctrl.onRemove({index:$index})'>Don't want this one!</button></td>
+        </tr>
+    </table>
+    <span ng-if='!ctrl.items.length'>Nothing found</span>
+</div>
