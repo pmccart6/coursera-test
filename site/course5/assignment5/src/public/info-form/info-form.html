@@ -1,0 +1,32 @@
+<fieldset>
+    <legend>Sign Up</legend>
+    <form name='signUpForm' novalidate>
+        <span>First Name: </span>
+        <input type="text" name="firstName" ng-model="signUpCtrl.item.firstName" required min-length="1" placeholder="First Name"><br>
+        <span ng-if="signUpForm.firstName.$error.required && signUpForm.firstName.$touched">
+            First Name required
+          </span><br>
+        <span>Last Name: </span>
+        <input type="text" name="lastName" ng-model="signUpCtrl.item.lastName" required min-length="1" placeholder="Last Name"><br>
+        <span ng-if="signUpForm.lastName.$error.required && signUpForm.lastName.$touched">
+              Last Name required
+          </span><br>
+        <span>Email: </span>
+        <input type='email' name='email' ng-model='signUpCtrl.item.email' required min-length="1" placeholder="Email"><br>
+        <span ng-if="signUpForm.email.$error.required && signUpForm.email.$touched">
+            Email required
+        </span><br>
+        <span>Phone: </span>
+        <input type='number' name='phoneNum' ng-model='signUpCtrl.item.phoneNum' required min-length="1" placeholder="Phone Number"><br>
+        <span ng-if="signUpForm.phoneNum.$error.required && signUpForm.phoneNum.$touched">
+            Phone Number required
+        </span><br>
+        <span>Number of Favorite Menu Item: </span>
+        <input type='text' name='favMenuItem' ng-model='signUpCtrl.item.favMenuItem' required min-length="1" placeholder="Number">
+        <span ng-if='signUpCtrl.favItemNotFound && signUpForm.favMenuItem.$touched'>No such menu number exists.</span><br>
+        <span ng-if="signUpForm.favMenuItem.$error.required && signUpForm.favMenuItem.$touched">
+            Menu Item required
+        </span><br>
+        <button ng-click='signUpCtrl.go()' ng-disabled='signUpForm.$invalid'>Submit</button>
+    </form>
+</fieldset>
